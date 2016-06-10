@@ -1,0 +1,29 @@
+{
+  "name": "speed-convert",
+  "version": "0.0.1",
+  "description": "A JavaScript library for converting between different units of speed",
+  "main": "index.js",
+  "devDependencies": {
+    "semistandard": "^8.0.0"
+  },
+  "scripts": {
+    "test": "tests/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsejcksn/speed-convert.git"
+  },
+  "keywords": [
+    "speed-convert",
+    "speed",
+    "convert",
+    "conversion",
+    "pace"
+  ],
+  "author": "Jesse Jackson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jsejcksn/speed-convert/issues"
+  },
+  "homepage": "https://github.com/jsejcksn/speed-convert#readme"
+}
