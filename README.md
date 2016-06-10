@@ -1,2 +1,3 @@
 # speed-convert
-Converts between different units of speed
+
+A JavaScript library for converting between different units of speed
