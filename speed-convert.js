@@ -49,14 +49,23 @@ var length = {
   }
 };
 
-console.log('1 m = ' + length.m.ft + ' ft');
-console.log(convertToString(3, 'm', 'km'));
+console.log(convert(3, 'm', 'km'));
+console.log(convert(3, 'm', 'km', true));
+console.log(convertToString(3, 'm', 'km', true));
 
-function convert (val, unitIn, unitOut) {
-  return val * length[unitIn][unitOut];
+function convert (val, unitIn, unitOut, asArray) {
+  if (typeof val === 'number' && asArray === true) {
+    return [val * length[unitIn][unitOut], unitOut, val, unitIn];
+  } else if (typeof val === 'number' && unitOut) {
+    return val * length[unitIn][unitOut];
+  } else if (val) {
+    return val;
+  } else {
+    return 0;
+  }
 }
 
-function convertToString (val, unitIn, unitOut) {
-  var valOut = convert(val, unitIn, unitOut);
-  return val + ' ' + unitIn + ' = ' + valOut + ' ' + unitOut;
+function convertToString (val, unitIn, unitOut, asArray) {
+  var valOut = convert(val, unitIn, unitOut, asArray);
+  return valOut[2] + ' ' + valOut[3] + ' = ' + valOut[0] + ' ' + valOut[1];
 }
