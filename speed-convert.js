@@ -50,3 +50,13 @@ var length = {
 };
 
 console.log('1 m = ' + length.m.ft + ' ft');
+console.log(convertToString(3, 'm', 'km'));
+
+function convert (val, unitIn, unitOut) {
+  return val * length[unitIn][unitOut];
+}
+
+function convertToString (val, unitIn, unitOut) {
+  var valOut = convert(val, unitIn, unitOut);
+  return val + ' ' + unitIn + ' = ' + valOut + ' ' + unitOut;
+}
