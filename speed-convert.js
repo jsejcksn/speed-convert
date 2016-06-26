@@ -191,12 +191,3 @@ var speedConvert = (function () {
 }());
 
 module.exports = speedConvert;
-
-console.log(speedConvert.convert(12, 'm', 's', 'cm', 'm'));
-console.log(speedConvert.convert(12, 'm', 's', 'cm', 'm', true));
-console.log(speedConvert.convertLength(3, 'm', 'km'));
-console.log(speedConvert.convertLength(3, 'm', 'km', true));
-console.log(speedConvert.convertToString(3, 'm', 'km', 'length', true));
-console.log(speedConvert.convertTime(30, 'm', 's'));
-console.log(speedConvert.convertTime(30, 'm', 's', true));
-console.log(speedConvert.convertToString(30, 'm', 's', 'time', true));
